@@ -1,5 +1,8 @@
 ## Fluentd with elasticsearch and kibana 
 
+There is also a docker hub image of fluentd that I created with the build infromation.
+https://cloud.docker.com/u/digikin/repository/docker/digikin/fluentd
+
 ### Docker-compose.yml
 ```
 version: '3'
