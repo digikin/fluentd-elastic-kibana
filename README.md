@@ -27,7 +27,7 @@ services:
       - "24224:24224/udp"
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
     environment:
       - "discovery.type=single-node"
     expose:
@@ -36,7 +36,7 @@ services:
       - "9200:9200"
 
   kibana:
-    image: kibana:7.2.0
+    image: kibana:7.9.2
     links:
       - "elasticsearch"
     ports:
