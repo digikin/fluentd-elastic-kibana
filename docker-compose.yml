@@ -33,7 +33,7 @@ services:
       - "9200:9200"
 
   kibana:
-    image: kibana:7.2.0
+    image: kibana:7.9.2
     links:
       - "elasticsearch"
     ports:
