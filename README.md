@@ -70,14 +70,17 @@ services:
 ```
 ### Dockerfile 
 ```
-FROM fluent/fluentd:v1.6-debian-1
+FROM fluent/fluentd:v1.11-debian-1
 USER root
-RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "3.5.2"]
+RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "4.3.1"]
 USER fluent
 ```
 
 ### Command
 `docker-compose up -d`
+
+If you alreay have the image and just want to rebuild fluentd with the new debian and gem version run:
+`docker-compose up -d --build`
 
 ### Site Info
 http://localhost:5601
