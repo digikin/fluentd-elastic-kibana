@@ -79,7 +79,7 @@ USER fluent
 ### Command
 `docker-compose up -d`
 
-If you alreay have the image and just want to rebuild fluentd with the new debian and gem version run:
+If you alreay have the image and just want to rebuild fluentd with the new debian and gem version run:  
 `docker-compose up -d --build`
 
 ### Site Info
