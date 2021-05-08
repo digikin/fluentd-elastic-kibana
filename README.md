@@ -27,7 +27,7 @@ services:
       - "24224:24224/udp"
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.2
     environment:
       - "discovery.type=single-node"
     expose:
@@ -36,7 +36,7 @@ services:
       - "9200:9200"
 
   kibana:
-    image: kibana:7.10.1
+    image: kibana:7.12.1
     links:
       - "elasticsearch"
     ports:
@@ -74,7 +74,7 @@ services:
 ```
 FROM fluent/fluentd:v1.11-debian-1
 USER root
-RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "5.0.0"]
+RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "5.0.3"]
 USER fluent
 ```
 
