@@ -27,7 +27,7 @@ services:
       - "24224:24224/udp"
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
     environment:
       - "discovery.type=single-node"
     expose:
