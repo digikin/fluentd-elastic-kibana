@@ -1,7 +1,7 @@
 ## Fluentd with elasticsearch and kibana 
 
 ### Docker-compose.yml
-```
+```yaml
 version: '3'
 services:
   web:
@@ -43,7 +43,7 @@ services:
       - "5601:5601"
 ```
 ### fluent.conf
-```
+``` conf
 <source>
   @type forward
   port 24224
@@ -74,6 +74,7 @@ services:
 ```
 FROM fluent/fluentd:v1.12.0-debian-1.0
 USER root
+RUN ["gem", "install", "elasticsearch", "--no-document", "--version", "7.13.0"]
 RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "5.0.3"]
 USER fluent
 ```
